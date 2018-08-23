@@ -40,6 +40,9 @@ function HealthMetricVisProvider(Private) {
           labels: {
             show: true
           },
+          value: {
+            show: true
+          },
           style: {
             fontSize: 60,
             fontColor: 'black',

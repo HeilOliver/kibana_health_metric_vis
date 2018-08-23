@@ -102,11 +102,13 @@ export class HealthMetricVisComponent extends Component {
           className="metric-container"
           style={{ backgroundColor: metric.bgColor }}
         >
-          <div
-            className="metric-value"
-            style={metricValueStyle}
-            dangerouslySetInnerHTML={{ __html: metric.value }}
-          />
+          {this.props.vis.params.metric.value.show &&
+             <div
+             className="metric-value"
+             style={metricValueStyle}
+             dangerouslySetInnerHTML={{ __html: metric.value }}
+           />
+          }
           {this.props.vis.params.metric.labels.show &&
             <div>{metric.label}</div>
           }
